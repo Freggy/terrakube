@@ -9,3 +9,9 @@
   vars:
     docker__edition: "ce"
     docker__version: "18.06.1"
+
+  tasks:
+  - name: Ensure that docker is started
+    service:
+      name: docker
+      state: started
